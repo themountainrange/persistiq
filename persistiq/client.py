@@ -73,6 +73,6 @@ class Client(object):
 
 
 api = Client(
-    os.environ['PERSIST_IQ_API_KEY'],
+    os.environ.get('PERSIST_IQ_API_KEY', ''),
     version=os.environ.get('PERSIST_IQ_API_VERSION', 'v1')
 )
